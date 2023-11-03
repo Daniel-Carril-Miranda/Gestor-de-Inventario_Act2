@@ -33,24 +33,3 @@ export const insertProducts = ()=> {
     });
 }
 
-// Función buscar Productos:
-export const searchProduct = (productName) => {
-    const foundProduct = inventory.find(product => product.nombre === productName);
-    const resultArea = document.getElementById("message");
-
-    if (foundProduct) {
-        resultArea.innerHTML = `
-            <tr>
-                <td>${foundProduct.id}</td>
-                <td>${foundProduct.nombre}</td>
-                <td>${foundProduct.cantidad}</td>
-                <td>${foundProduct.precio}</td>
-            </tr>
-        `;
-
-        const cleanTable = document.getElementById("cleartable");
-        cleanTable.innerHTML = "";
-    } else {
-        resultArea.textContent = "Producto no encontrado";
-    }
-}
