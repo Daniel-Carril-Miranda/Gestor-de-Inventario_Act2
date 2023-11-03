@@ -2,6 +2,7 @@ import { inventory } from "./products.js";
 import { listProducts } from "./productsList.js";
 console.log("insertar_Producto.js cargado");
 
+// Función insertar Productos:
 export const insertProducts = ()=> {
     const productForm = document.getElementById("product-form-events");
     productForm.addEventListener("submit", function(event){
@@ -31,33 +32,25 @@ export const insertProducts = ()=> {
         }
     });
 }
-export const searchProducts = () => {
-    const searchForm = document.getElementById("product-form-search");
-    searchForm.addEventListener("submit", function(event){
-        event.preventDefault();  
-        // Enlazamos elementos   
-        const name = document.getElementById("searchProduct").value.trim();
-        if (name){
-            // Limpiar los campos del formulario
-            const cleanTable = document.getElementById("cleartable");
-            cleanTable.innerHTML = "";
-        } else {alert("Introduce un nombre de búsqueda")}
-    });
+
+// Función buscar Productos:
+export const searchProduct = (productName) => {
+    const foundProduct = inventory.find(product => product.nombre === productName);
+    const resultArea = document.getElementById("message");
+
+    if (foundProduct) {
+        resultArea.innerHTML = `
+            <tr>
+                <td>${foundProduct.id}</td>
+                <td>${foundProduct.nombre}</td>
+                <td>${foundProduct.cantidad}</td>
+                <td>${foundProduct.precio}</td>
+            </tr>
+        `;
+
+        const cleanTable = document.getElementById("cleartable");
+        cleanTable.innerHTML = "";
+    } else {
+        resultArea.textContent = "Producto no encontrado";
+    }
 }
-
-
-
-
-
-/* //Buscar producto 
-const name = document.getElementById("searchProduct").value;
-export const searchProducts = (inventory, name) => {
-    for (let i = 0; i < lista.length; i++) {
-        // Si el nombre del objeto coincide con el nombre buscado
-        if (lista[i].name === name) {
-          // Se devuelve el objeto
-          return lista[i];
-        }
-      }
-      return undefined;
-} */

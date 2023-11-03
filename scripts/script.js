@@ -15,8 +15,9 @@ btnForm.addEventListener("click", ()=> {
     insertProducts();
 });
 
-/* const SearchForm = document.getElementById("searchBtn");
-btnForm.addEventListener("click", ()=> {
+const SearchForm = document.getElementById("searchBtn");
+SearchForm.addEventListener("click", ()=> {
     console.log("Botón buscar pulsado");
-    searchProducts();
-}); */
+    const search = document.getElementById("searchProduct").value;
+    searchProduct(search);
+});
