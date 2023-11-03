@@ -31,3 +31,33 @@ export const insertProducts = ()=> {
         }
     });
 }
+export const searchProducts = () => {
+    const searchForm = document.getElementById("product-form-search");
+    searchForm.addEventListener("submit", function(event){
+        event.preventDefault();  
+        // Enlazamos elementos   
+        const name = document.getElementById("searchProduct").value.trim();
+        if (name){
+            // Limpiar los campos del formulario
+            const cleanTable = document.getElementById("cleartable");
+            cleanTable.innerHTML = "";
+        } else {alert("Introduce un nombre de búsqueda")}
+    });
+}
+
+
+
+
+
+/* //Buscar producto 
+const name = document.getElementById("searchProduct").value;
+export const searchProducts = (inventory, name) => {
+    for (let i = 0; i < lista.length; i++) {
+        // Si el nombre del objeto coincide con el nombre buscado
+        if (lista[i].name === name) {
+          // Se devuelve el objeto
+          return lista[i];
+        }
+      }
+      return undefined;
+} */

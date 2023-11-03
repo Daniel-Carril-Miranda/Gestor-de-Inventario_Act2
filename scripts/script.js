@@ -1,6 +1,6 @@
 import { listProducts } from "./productsList.js";
 import { insertProducts } from "./insertProducts.js";
-import { searchProducts } from "./searchProducts.js" 
+// import { searchProducts } from "./searchProducts.js";
 
     // Author: Daniel Carril Miranda (Student 2ºDAW)
     // GitHub: 
@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded",listProducts);
 const btnForm = document.getElementById("addBtn");
 btnForm.addEventListener("click", ()=> {
     console.log("Botón añadir pulsado");
-    insertProducts()
+    insertProducts();
 });
 
-const SearchForm = document.getElementById("searchBtn");
+/* const SearchForm = document.getElementById("searchBtn");
 btnForm.addEventListener("click", ()=> {
     console.log("Botón buscar pulsado");
-    insertProducts()
-});
+    searchProducts();
+}); */

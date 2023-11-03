@@ -5,12 +5,12 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(151, 166, 240);
-    background: radial-gradient(circle, rgb(131, 250, 127)50%, rgb(168, 255, 54)100%); /* crea una difusión de color en el centro */
+    background: radial-gradient(circle, rgb(0, 0, 0)50%, rgb(168, 255, 54)100%); /* crea una difusión de color en el centro */
 }
 h1{
     text-align: center;
     font-family: Nosifer;
-    color: red;
+    color: rgb(103, 196, 215);
 }
 .inventory-table-styles{
     border-collapse: collapse; /* El contenido de las celdas se junta */
@@ -25,7 +25,7 @@ h1{
     text-align: center;
 }
 .inventory-table-styles th{
-    background-color: #3523b8;
+    background-color: #7967fb;
 }
 .inventory-table-styles tr:hover{
     background-color: black;

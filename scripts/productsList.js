@@ -19,6 +19,8 @@ export const listProducts = () => {
         cell3.innerHTML = item.precio;
 
         // Botón de borrar producto
+
+        
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "BORRAR"; //Esto hace mención al texto que hay entre las etiquetas del botón
         deleteButton.addEventListener("click",()=>{
@@ -34,14 +36,13 @@ export const listProducts = () => {
             cleanTable.innerHTML = ""; //Con esta líne limpiamos la tabla y la vaciamos 
             listProducts()
         });
-        // Lógica para borrar un producto
         cell4.appendChild(deleteButton);
-
+        
+        /* Lógica para editar el producto */
         const editButton = document.createElement("button");
         editButton.innerText = "EDITAR"; //Esto hace mención al texto que hay entre las etiquetas del botón
         editButton.addEventListener("click",()=>{
         });
-        /* Lógica para editar el producto */
         cell4.appendChild(editButton);
     });
 }
