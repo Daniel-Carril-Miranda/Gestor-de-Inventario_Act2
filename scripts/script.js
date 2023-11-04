@@ -38,7 +38,7 @@ const SearchForm = document.getElementById("searchProductInput");
 SearchForm.addEventListener("keyup", function (event) {
     if(event.key === "Enter"){
         console.log("Botón buscar pulsado");
-        const search = document.getElementById("searchProductInput").value;
+        const search = document.getElementById("searchProductInput").value.trim();
         searchProducts(search);
     } 
 });
@@ -48,6 +48,6 @@ const SearchForm2 = document.getElementById("searchBtn");
 
 SearchForm2.addEventListener("click", ()=> {
     console.log("Botón buscar pulsado");
-    const search = document.getElementById("searchProductInput").value;
+    const search = document.getElementById("searchProductInput").value.trim();
     searchProducts(search);
 });

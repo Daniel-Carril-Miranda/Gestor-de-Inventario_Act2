@@ -20,7 +20,6 @@ export const searchProducts = (productName) => {
             <th>Nombre</th> 
             <th>Cantidad</th>
             <th>Precio</th>
-            <th>Acciones</th>
         </tr>
         <tr>
             <td>${foundProduct.nombre}</td>
