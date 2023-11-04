@@ -31,11 +31,23 @@ delAll.addEventListener("click", ()=>{
     }
 });
 
-// Buscar Producto
-const SearchForm = document.getElementById("searchBtn");
+// Buscar Producto con "Enter"
+const SearchForm = document.getElementById("searchProductInput");
 
-SearchForm.addEventListener("click", ()=> {
+// Agrega un evento para detectar la tecla "Enter" en el campo de entrada 
+SearchForm.addEventListener("keyup", function (event) {
+    if(event.key === "Enter"){
+        console.log("Botón buscar pulsado");
+        const search = document.getElementById("searchProductInput").value;
+        searchProducts(search);
+    } 
+});
+
+// Buscar Producto con Click
+const SearchForm2 = document.getElementById("searchBtn");
+
+SearchForm2.addEventListener("click", ()=> {
     console.log("Botón buscar pulsado");
-    const search = document.getElementById("searchProduct").value;
+    const search = document.getElementById("searchProductInput").value;
     searchProducts(search);
 });
