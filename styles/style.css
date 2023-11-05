@@ -5,31 +5,36 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(151, 166, 240);
-    background: radial-gradient(circle, rgb(0, 0, 0)50%, rgb(168, 255, 54)100%); /* crea una difusión de color en el centro */
+    background: radial-gradient(circle, rgb(76, 171, 255)50%, rgb(147, 242, 254)100%); /* crea una difusión de color en el centro */
 }
 h1{
     text-align: center;
     font-family: Agbalumo; /* Aplico fuente Importada */
-    color: rgb(103, 196, 215);
+    color: rgb(0, 0, 0);
 }
 .inventory-table-styles{
     border-collapse: collapse; /* El contenido de las celdas se junta */
     width: 80%;
     margin: 20px auto;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: large;
 }
 .inventory-table-styles th, 
 .inventory-table-styles td {
-    border: 1px solid #cccccc;
+    border: 1px solid #000e5a;
     padding: 8px;
     text-align: center;
+    background-color: rgb(130, 255, 213);
 }
 .inventory-table-styles th{
-    background-color: #7967fb;
+    background-color: #67eafb;
+    font-size: larger;
 }
 .inventory-table-styles tr:hover{
     background-color: black;
-    color: white;
+    color: rgb(245, 0, 0);
+    transform: scale(101%);
 }
 .product-form-styles{
     background-color: black;
@@ -53,7 +58,15 @@ label {
 }
 button {
     margin: 2px;
+    padding: 2px;
+    font-size: large;
     background-color: #3523b8;
     color: white;
     border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(90%);
+    }
 }
