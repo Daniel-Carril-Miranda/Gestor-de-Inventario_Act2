@@ -35,13 +35,7 @@ export const insertProducts = ()=> {
             setTimeout(function() {
             outputMessage.textContent = "";
             }, 1000); // 1000 milisegundos equivale a 1 segundo
-        } else {
-            outputMessage.textContent = "Producto NO añadido, revisa que los valores sean positivos";
-        // Después de 2 segundos, se borra el mensaje.
-        setTimeout(function() {
-        outputMessage.textContent = "";
-        }, 2000); 
-        }
+        } 
     });
 }
 
