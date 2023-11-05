@@ -19,13 +19,14 @@
             <input type="number" step="0.01" id="product-price" required>
             <button type="submit" id="addBtn">Agregar Producto</button>
         </form>
+        <center><button class="delAll" id="delAllBtn">Borrar todo</button></center>
     </header>
     <main>
-        <button id="delAllBtn">Borrar todo</button>
-    
-        <input id="searchProductInput" type="text" placeholder="Nombre del producto">
+        <div class="search-section">
+            <input id="searchProductInput" type="text" placeholder="Nombre del producto">
         <button type="button" id="searchBtn">Buscar Producto</button>
-        <div id="search-result" class="inventory-table-styles"></div>
+        </div>
+        <p id="search-result" class="inventory-table-styles"></p>
     </main>
     <footer>
         <table id="inventory-table-events" class="inventory-table-styles">

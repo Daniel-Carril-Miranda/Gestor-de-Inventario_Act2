@@ -37,31 +37,63 @@ h1{
     transform: scale(101%);
 }
 .product-form-styles{
-    background-color: black;
+    background: rgb(121,9,102);
+    background: linear-gradient(90deg, rgba(121,9,102,1) 0%, rgb(49, 185, 124) 83%);
     color: white;
+    display: flex;
     padding: 20px;
-    border: 1px solid #ef3333;
+    border: 1px solid #000000;
     border-radius: 5px;
     margin: 20px;
-    box-shadow: 20px 20px 30px; /* El primero es a la derecha, el segundo hacia abajo, y el tercero es el difuminado */
+    box-shadow: 5px 5px 50px 10px; /* El primero es a la derecha, el segundo hacia abajo, y el tercero es el difuminado */
+}
+.search-section{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
 }
 label {
     display: block; /* Con esto los elementos nunca van a cambiar de sitio aunque la página cambie de tamaño */
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 5px;
     width: 10%;
     padding: 10px;
     border-radius: 3px;
-    color: white;
-    background-color: #ef3333;
+    color: rgb(0, 0, 0);
+    background-color: #bc8c1a;
     outline: none;
+    font-size: large;
+}
+input{
+    display: block;
+    font-size: large;
+    width: 8%;
+    padding: 10px;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    background-color: #a9a69f;
+
 }
 button {
     margin: 2px;
-    padding: 2px;
+    padding: 4px;
     font-size: large;
     background-color: #3523b8;
     color: white;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(90%);
+    }
+}
+.delAll{
+    margin: 2px;
+    padding: 10px;
+    font-size: larger;
+    background-color: #d72121;
+    color: rgb(255, 254, 254);
     border-radius: 5px;
     &:hover{
         cursor: pointer;
