@@ -12,8 +12,9 @@ export const insertProducts = ()=> {
         const productName = document.getElementById("product-name").value;
         const productQuantity = parseInt(document.getElementById("product-quantity").value);
         const productPrice = parseFloat(document.getElementById("product-price").value);
+        const outputMessage = document.getElementById("notification");
         // El "productName" significa que haya un valor simplemente
-        if (productName && !isNaN(productQuantity) && !isNaN(productPrice)){
+        if (productName && !isNaN(productQuantity) && !isNaN(productPrice) && productQuantity>0 && productPrice>0){
 
             const newProduct = {
                 id : inventory.length + 1,
@@ -29,6 +30,17 @@ export const insertProducts = ()=> {
             // Limpiar los campos del formulario
             productForm.reset();
             listProducts();
+            outputMessage.textContent = "Producto añadido";
+            // Después de 1 segundo, se borra el mensaje.
+            setTimeout(function() {
+            outputMessage.textContent = "";
+            }, 1000); // 1000 milisegundos equivale a 1 segundo
+        } else {
+            outputMessage.textContent = "Producto NO añadido, revisa que los valores sean positivos";
+        // Después de 2 segundos, se borra el mensaje.
+        setTimeout(function() {
+        outputMessage.textContent = "";
+        }, 2000); 
         }
     });
 }
