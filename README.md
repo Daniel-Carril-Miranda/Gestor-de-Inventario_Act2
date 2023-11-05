@@ -2,4 +2,4 @@
 
 **Author**: Daniel Carril Miranda (Student 2ºDAW)
 
-**GitHub**: git.com
+**GitHub**: https://github.com/Daniel-Carril-Miranda/Gestor-de-Inventario_Act2.git

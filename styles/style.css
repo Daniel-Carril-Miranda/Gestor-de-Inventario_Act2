@@ -19,6 +19,7 @@ h1{
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: large;
+    box-shadow: 5px 5px 50px 10px; /* El primero es a la derecha, el segundo hacia abajo, y el tercero es el difuminado */
 }
 .inventory-table-styles th, 
 .inventory-table-styles td {

@@ -1,10 +1,10 @@
+// Author: Daniel Carril Miranda (Student 2ºDAW)
+// GitHub: https://github.com/Daniel-Carril-Miranda/Gestor-de-Inventario_Act2.git
+
 import { inventory } from "./products.js";
 import { listProducts } from "./productsList.js";
 import { insertProducts } from "./insertProducts.js";
 import { searchProducts } from "./searchProducts.js";
-
-    // Author: Daniel Carril Miranda (Student 2ºDAW)
-    // GitHub: 
 
 console.log("JS bien enlazado");
 //Listamos los productos 
