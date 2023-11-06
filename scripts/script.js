@@ -28,6 +28,7 @@ delAll.addEventListener("click", ()=>{
         // Limpiar la tabla y volver a listar los productos (vacía)
         cleanTable.innerHTML = "";
         listProducts();
+        mostrarPrecioTotal(); /* Actualiza el precio */
     }
 });
 
@@ -51,3 +52,4 @@ SearchForm2.addEventListener("click", ()=> {
     const search = document.getElementById("searchProductInput").value.trim();
     searchProducts(search);
 });
+

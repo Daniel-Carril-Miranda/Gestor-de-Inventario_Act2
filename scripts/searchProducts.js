@@ -1,5 +1,4 @@
 import { inventory } from "./products.js";
-import { listProducts } from "./productsList.js";
 
 console.log("Buscar_producto cargado")
 
@@ -7,7 +6,6 @@ console.log("Buscar_producto cargado")
 export const searchProducts = (productName) => {
   const foundProduct = inventory.find(product => product.nombre.toLowerCase() === productName.toLowerCase()); /* Con esto nos busca los productos de mismo nombre aunque esté en mayúsculas */
   const resultArea = document.getElementById("search-result");
-
 
 /*   const cleanTable = document.getElementById("cleartable");
   cleanTable.innerHTML = ""; */

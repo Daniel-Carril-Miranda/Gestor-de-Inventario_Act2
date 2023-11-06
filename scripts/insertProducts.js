@@ -1,5 +1,6 @@
 import { inventory } from "./products.js";
 import { listProducts } from "./productsList.js";
+
 console.log("insertar_Producto.js cargado");
 
 // Función insertar Productos:
@@ -14,8 +15,8 @@ export const insertProducts = ()=> {
         const productPrice = parseFloat(document.getElementById("product-price").value);
         const outputMessage = document.getElementById("notification");
         // El "productName" significa que haya un valor simplemente
-        if (productName && !isNaN(productQuantity) && !isNaN(productPrice) && productQuantity>0 && productPrice>0){
-
+        if (productName && !isNaN(productQuantity) && !isNaN(productPrice) && productQuantity>=1 && productPrice>0){
+            // Es importante poner que la cantidad del producto sea mayor o igual que 1 y que cueste más de 0€
             const newProduct = {
                 id : inventory.length + 1,
                 nombre : productName,

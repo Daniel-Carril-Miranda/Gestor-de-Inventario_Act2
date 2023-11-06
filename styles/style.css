@@ -29,8 +29,12 @@ h1{
     background-color: rgb(130, 255, 213);
 }
 .inventory-table-styles th{
+    font-family: Agbalumo;
     background-color: #67eafb;
     font-size: larger;
+}
+.inventory-table-styles td{
+    font-family: 'Courier New', Courier, monospace;
 }
 .inventory-table-styles tr:hover{
     background-color: black;
